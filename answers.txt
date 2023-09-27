@@ -1,6 +1,28 @@
-1
-2
-3
-4
-5 What is returned by recv() from the server after the client is done sending the HTTP request?
-6
+1:
+    Using the socket() function, we can specify the type of socket. Setting this type to the constant
+    SOCK_STREAM provided by the socket package creates a TCP socket.
+
+
+2:
+    A client socket initiates a connection to a server socket, allowing for requests and data to be 
+    sent to the server. A server socket waits for incoming connections requested by client sockets.
+    The server will take in requests and data from the client and handle it as required.
+
+
+3:
+    Using the SO_REUSEADDR constant from the socket library in the setsockopt() function permits the OS
+    to reuse the same bind port.
+
+
+4:
+    We get the address info of the client, which is the IP address of the client, and the port number.
+
+
+5:
+    recv() returns data retrieved from the socket, in the form of a bytes object. This data is what has
+    been sent by the client socket. After the client is done, the client sends an empty bytes object b''
+    to indicate the closure of the connection.
+
+
+6:
+    https://github.com/akhadeli/cmput404_lab2
